@@ -45,10 +45,18 @@ public class Student {
         this.studentNumber = studentNumber;
     }
 
+    /**
+     * Adding Interests getter and Setter..
+     * @return
+     */
     public String getInterests() {
         return interests;
     }
 
+    /**
+     * Validating all the interests.
+     * @param interests
+     */
     public void setInterests(String interests) {
         interests = interests.toLowerCase();
         List<String> validInterests = getInterest();
@@ -58,10 +66,18 @@ public class Student {
             throw new IllegalArgumentException(interests + "is not valid, valid Interests are: " + validInterests);
     }
 
+    /**
+     * Declaring all valid interests.
+     * @return
+     */
     public static List<String> getInterest() {
         return Arrays.asList("coding", "gaming", "hiking", "skiing", "reading", "playing", "writing", "singing");
     }
 
+    /**
+     * To string method.
+     * @return
+     */
     public String toString()
     {
         return "Your name is : " + firstName + " " + lastName + "\n" + "Your Student Number is : " + studentNumber + "\n" + "Your interest is : " + interests;
